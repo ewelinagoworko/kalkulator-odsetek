@@ -8,14 +8,13 @@
 <body>
 
 	<h1>Wprowadź dane</h1>
-	<form method="post" action="">
+	<form method="post" action="" id="formularz">
 
 		<label for="wplata">Wpłata w PLN:</label>
-		<input type="number" id="wplata" value="0" min="100">
-		<br/>
-		<br/>
+		<input type="number" id="wplata" value="0" min="0">
+		
 		<label for="ilosc-lat">Liczba lat:</label>
-		<input type="number" id="ilosc-lat" value="1">
+		<input type="number" id="ilosc-lat" value="1" min="1">
 		<br/>
 		<br/>
 		<label for="kapitalizacja">Częstotliwość kapitalizacji:</label>
@@ -27,15 +26,15 @@
 		<br/>
 		<br/>
 		<label for="oprocentowanie">Stopa zwrotu w %:</label>
-		<input type="number" id="oprocentowanie" value="10" min="0">
+		<input type="number" id="oprocentowanie" value="0">
 		<br/>
 		<br/>
 		<label for="podatek">Uwzględnij podatek belki 19%:</label>
 		<label>
-			<input type="checkbox" value="podatek" id="podatek"> </label>
+			<input type="checkbox" id="podatek"> </label>
 		<br/>
 		<br/>
-		<input type="submit" onclick="oblicz()" value="Oblicz" />
+		<input type="submit" onclick="oblicz(event)" value="Oblicz" />
 	
 	
 	</form>
